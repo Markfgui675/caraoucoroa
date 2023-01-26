@@ -1,4 +1,4 @@
-import 'package:caraoucoroa/TelaSorteio.dart';
+import 'TelaSorteio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
@@ -15,14 +15,9 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
   void _abrirTela(){
 
     String? resultado;
-    var random = Random();
-    var randomNUmber = random.nextInt(2);
-
-    if (randomNUmber==0){
-      resultado = 'imagens/moeda_cara.png';
-    } else if(randomNUmber==1){
-      resultado = 'imagens/moeda_coroa.png';
-    }
+    var itens = ['cara', 'coroa'];
+    var randomNUmber = Random().nextInt(2);
+    resultado = itens[randomNUmber];
 
     Navigator.push(context, MaterialPageRoute(builder: (context) => TelaSorteio(resultado)));
   }
