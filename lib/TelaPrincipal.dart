@@ -14,10 +14,9 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
 
   void _abrirTela(){
 
-    String? resultado;
     var itens = ['cara', 'coroa'];
     var randomNUmber = Random().nextInt(2);
-    resultado = itens[randomNUmber];
+    String resultado = itens[randomNUmber];
 
     Navigator.push(context, MaterialPageRoute(builder: (context) => TelaSorteio(resultado)));
   }
